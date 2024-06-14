@@ -73,10 +73,12 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
-    height: 100,
-    width: 150,
+    height: 70,
+    width: 140,
     bottom: 0,
     left: 0,
-    alignContent: 'center',
+    marginTop: 8,
+    marginBottom: 16,
+    alignSelf: 'center',
   },
 });

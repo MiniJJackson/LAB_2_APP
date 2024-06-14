@@ -11,7 +11,12 @@ export default function ChatScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
+      headerImage={
+        <Image
+        source={require('@/assets/images/LogoQuercus.png')}
+        style={styles.reactLogo}
+        />
+      }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
@@ -98,5 +103,14 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+  },
+  reactLogo: {
+    height: 70,
+    width: 140,
+    bottom: 0,
+    left: 0,
+    marginTop: 8,
+    marginBottom: 16,
+    alignSelf: 'center',
   },
 });
