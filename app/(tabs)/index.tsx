@@ -3,7 +3,6 @@ import { Image, StyleSheet, Platform, TouchableOpacity, Text } from 'react-nativ
 import { useNavigation } from '@react-navigation/native'; // Import necessary navigation modules
 
 
-import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
@@ -15,7 +14,7 @@ export default function HomeScreen() {
   const navigation = useNavigation(); // Get navigation object from React Navigation
 
   const handleNavigate = () => {
-    navigation.navigate('steps'); // Navigate to 'SearchScreen' when button is pressed
+    navigation.navigate('Steps'); // Navigate to 'Screen' when button is pressed
   };
   
   return (
@@ -28,42 +27,41 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
+        <ThemedText type="title">Hoe kunnen wij u begeleiden?</ThemedText>
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
+
+        <ThemedText type="subtitle">Heeft u het overlijden al aangegeven bij de gemeente? </ThemedText>
           <ThemedText>
-          When readt LOVE on to the next step.
+            Dit kunt u hier doen.
           </ThemedText>
-        </ThemedText>
+        
+
         <TouchableOpacity onPress={handleNavigate} style={styles.button}>
-          <Text style={styles.buttonText}>Search</Text>
+          <Text style={styles.buttonText}>Start u aangifte</Text>
         </TouchableOpacity>
+
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
+
+        <ThemedText type="subtitle">Heeft u de begrafenisondernemer al gecontacteerd?</ThemedText>
         <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
+          Heb je hulp nodig bij het zoeken van een begrafenisondernemer en het regelen van de begrafenis?
         </ThemedText>
         <ThemedText>
-          When readt move on to the next step.
+          Start hier met je zoektocht en begeleiding.
         </ThemedText>
+
         <TouchableOpacity onPress={handleNavigate} style={styles.button}>
-          <Text style={styles.buttonText}>Search</Text>
+          <Text style={styles.buttonText}>Begrafenisondernemer</Text>
         </TouchableOpacity>
+
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
+
         <ThemedText type="subtitle">More info</ThemedText>
         <ThemedText>
           When ready move on to the next step.
@@ -71,7 +69,9 @@ export default function HomeScreen() {
           <ThemedText>
           When ready move on to the next step.
           </ThemedText>
+
       </ThemedView>
+
     </ParallaxScrollView>
   );
 }
@@ -97,12 +97,13 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: '#8AAD34',
-    paddingVertical: 10,
+    paddingVertical: 8,
     borderRadius: 4,
     alignItems: 'center',
+    marginHorizontal: 20,
   },
   buttonText: {
     color: '#fff',
-    fontSize: 16,
+    fontSize: 14,
   },
 });
