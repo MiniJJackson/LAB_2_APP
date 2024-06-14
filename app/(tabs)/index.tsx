@@ -1,11 +1,23 @@
-import { Image, StyleSheet, Platform } from 'react-native';
+import React from 'react';
+import { Image, StyleSheet, Platform, TouchableOpacity, Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native'; // Import necessary navigation modules
+
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 
+
+
 export default function HomeScreen() {
+
+  const navigation = useNavigation(); // Get navigation object from React Navigation
+
+  const handleNavigate = () => {
+    navigation.navigate('steps'); // Navigate to 'SearchScreen' when button is pressed
+  };
+  
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#CDD5DC', dark: '#1D3D47' }}
@@ -19,6 +31,7 @@ export default function HomeScreen() {
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
@@ -32,7 +45,11 @@ export default function HomeScreen() {
           When readt LOVE on to the next step.
           </ThemedText>
         </ThemedText>
+        <TouchableOpacity onPress={handleNavigate} style={styles.button}>
+          <Text style={styles.buttonText}>Search</Text>
+        </TouchableOpacity>
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 2: Explore</ThemedText>
         <ThemedText>
@@ -40,22 +57,19 @@ export default function HomeScreen() {
         </ThemedText>
         <ThemedText>
           When readt move on to the next step.
-          </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
+        <TouchableOpacity onPress={handleNavigate} style={styles.button}>
+          <Text style={styles.buttonText}>Search</Text>
+        </TouchableOpacity>
+      </ThemedView>
+
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">More info</ThemedText>
         <ThemedText>
-          When readt move on to the next step.
+          When ready move on to the next step.
           </ThemedText>
           <ThemedText>
-          When readt move on to the next step.
+          When ready move on to the next step.
           </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
@@ -74,11 +88,21 @@ const styles = StyleSheet.create({
   },
   reactLogo: {
     height: 70,
-    width: 140,
+    width: 160,
     bottom: 0,
     left: 0,
     marginTop: 8,
     marginBottom: 16,
     alignSelf: 'center',
+  },
+  button: {
+    backgroundColor: '#8AAD34',
+    paddingVertical: 10,
+    borderRadius: 4,
+    alignItems: 'center',
+  },
+  buttonText: {
+    color: '#fff',
+    fontSize: 16,
   },
 });
