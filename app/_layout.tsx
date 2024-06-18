@@ -30,7 +30,8 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="steps" />
+        <Stack.Screen name="Steps" />
+        <Stack.Screen name="FuneralMap" />
         <Stack.Screen name="+not-found" />
       </Stack>
     </ThemeProvider>
