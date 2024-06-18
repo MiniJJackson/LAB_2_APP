@@ -62,6 +62,8 @@ export default function NotificationScreen() {
           title=""
           checked={checked[0]}
           onPress={() => toggleCheckbox(0)}
+          checkedColor="red" // Customize the checkbox color here
+          containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         />
       </View>
 

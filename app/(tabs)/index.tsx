@@ -17,6 +17,9 @@ export default function HomeScreen() {
     navigation.navigate('Steps'); // Navigate to 'Screen' when button is pressed
   };
   
+  const handleFuneral = () => {
+    navigation.navigate('FuneralMap'); // Navigate to 'Screen' when button is pressed
+  };
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#CDD5DC', dark: '#1D3D47' }}
@@ -54,7 +57,7 @@ export default function HomeScreen() {
           Start hier met je zoektocht en begeleiding.
         </ThemedText>
 
-        <TouchableOpacity onPress={handleNavigate} style={styles.button}>
+        <TouchableOpacity onPress={handleFuneral} style={styles.button}>
           <Text style={styles.buttonText}>Begrafenisondernemer</Text>
         </TouchableOpacity>
 
