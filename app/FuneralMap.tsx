@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, Text, View, TextInput, TouchableOpacity, FlatList, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function SearchFuneralDirectorScreen() {
@@ -28,7 +28,7 @@ export default function SearchFuneralDirectorScreen() {
 
   return (
     <View style={styles.container}>
-      <Image source={backgroundImage} style={styles.backgroundImage} />
+      <Image source={require('@/assets/images/LogoQuercus.png')}/>
       <TextInput
         style={styles.input}
         placeholder="Enter your area or city"

@@ -62,7 +62,7 @@ export default function NotificationScreen() {
           title=""
           checked={checked[0]}
           onPress={() => toggleCheckbox(0)}
-          checkedColor="red" // Customize the checkbox color here
+          checkedColor="#8AAD34" // Customize the checkbox color here
           containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         />
       </View>
@@ -83,6 +83,8 @@ export default function NotificationScreen() {
           title=""
           checked={checked[1]}
           onPress={() => toggleCheckbox(1)}
+          checkedColor="#8AAD34" // Customize the checkbox color here
+          containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         />
       </View>
 
@@ -99,6 +101,8 @@ export default function NotificationScreen() {
           title=""
           checked={checked[2]}
           onPress={() => toggleCheckbox(2)}
+          checkedColor="#8AAD34" // Customize the checkbox color here
+          containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         />
       </View>
 
@@ -115,6 +119,8 @@ export default function NotificationScreen() {
           title=""
           checked={checked[3]}
           onPress={() => toggleCheckbox(3)}
+          checkedColor="#8AAD34" // Customize the checkbox color here
+          containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         />
       </View>
 
@@ -133,6 +139,8 @@ export default function NotificationScreen() {
           title=""
           checked={checked[4]}
           onPress={() => toggleCheckbox(4)}
+          checkedColor="#8AAD34" // Customize the checkbox color here
+          containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         />
       </View>
 
@@ -149,6 +157,8 @@ export default function NotificationScreen() {
             title=""
             checked={checked[5]}
             onPress={() => toggleCheckbox(5)}
+            checkedColor="#8AAD34" // Customize the checkbox color here
+            containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
           />
       </View>    
 
@@ -163,12 +173,14 @@ export default function NotificationScreen() {
       <View style={styles.flexComplete}>
           <TouchableOpacity onPress={handleNavigate} style={getButtonStyle(6)}>
               <Text style={styles.buttonText}>contacteer mijn instantie</Text>
-            </TouchableOpacity>
-            <CheckBox
-              title=""
-              checked={checked[6]}
-              onPress={() => toggleCheckbox(6)}
-            />
+          </TouchableOpacity>
+              <CheckBox
+                title=""
+                checked={checked[6]}
+                onPress={() => toggleCheckbox(6)}
+                checkedColor="#8AAD34" // Customize the checkbox color here
+              containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
+              />
       </View>
 
       <Collapsible title="2. Denk na over het lot van de gezinswoning.">
@@ -184,6 +196,8 @@ export default function NotificationScreen() {
           title=""
           checked={checked[7]}
           onPress={() => toggleCheckbox(7)}
+          checkedColor="#8AAD34" // Customize the checkbox color here
+          containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         />
       </View>
       
@@ -201,6 +215,8 @@ export default function NotificationScreen() {
           title=""
           checked={checked[8]}
           onPress={() => toggleCheckbox(8)} style={{flex: 4}}
+          checkedColor="#8AAD34" // Customize the checkbox color here
+          containerStyle={{ backgroundColor: 'transparent', borderWidth: 0 }}
         />
       </View>
 
@@ -233,7 +249,7 @@ const styles = StyleSheet.create({
   },
 
   checkButton:{
-    borderColor: 'red',
+    borderColor: '#8AAD34',
     borderWidth: 2,
     paddingVertical: 0,
     marginHorizontal: 0,
