@@ -31,7 +31,7 @@ export default function SearchFuneralDirectorScreen() {
       <Image source={require('@/assets/images/LogoQuercus.png')}/>
       <TextInput
         style={styles.input}
-        placeholder="Enter your area or city"
+        placeholder="Zoek een begrafenisondernemer..."
         value={searchQuery}
         onChangeText={setSearchQuery}
       />

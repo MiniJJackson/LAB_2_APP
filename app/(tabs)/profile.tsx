@@ -20,43 +20,23 @@ export default function ProfileScreen() {
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
+        <ThemedText type="subtitle">Dit is je profiel pagina.</ThemedText>
         <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
-          Press{' '}
-          <ThemedText type="defaultSemiBold">
-            {Platform.select({ ios: 'cmd + d', android: 'cmd + m' })}
-          </ThemedText>{' '}
-          to open developer tools.
-          <ThemedText>
-          When readt LOVE on to the next step.
-          </ThemedText>
+          Start men in te loggen via Itsme.
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 2: Explore</ThemedText>
+        <ThemedText type="subtitle">Deel en laad documenten op.</ThemedText>
         <ThemedText>
-          Tap the Explore tab to learn more about what's included in this starter app.
+          Binnenkort kan je documenten opladen en delen met de belangrijke instanties.
         </ThemedText>
-        <ThemedText>
-          When readt move on to the next step.
-          </ThemedText>
+        
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
+        <ThemedText type="subtitle">Stel naasten aan.</ThemedText>
         <ThemedText>
-          When you're ready, run{' '}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-        <ThemedText>
-          When readt move on to the next step.
-          </ThemedText>
-          <ThemedText>
-          When readt move on to the next step.
-          </ThemedText>
+          Binnenkort kan je naasten aanstellen die je kunnen helpen met de administratie.
+        </ThemedText>  
       </ThemedView>
     </ParallaxScrollView>
   );

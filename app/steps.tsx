@@ -13,13 +13,16 @@ export default function NotificationScreen() {
   const navigation = useNavigation(); // Get navigation object from React Navigation
 
   const handleNavigate = () => {
-    navigation.navigate('FuneralMap'); // Navigate to 'Screen' when button is pressed
+    navigation.navigate('Begrafenisondernemers'); // Navigate to 'Screen' when button is pressed
   };
 
   const handleCall = () => {
     Linking.openURL('tel:112'); // Replace 112 with the desired emergency number
   };
 
+  const handleBank = () => {
+    navigation.navigate('Banken'); // Navigate to 'Screen' when button is pressed
+  };
   // State to manage checkbox status
   const [checked, setChecked] = useState(Array(10).fill(false));
 
@@ -132,7 +135,7 @@ export default function NotificationScreen() {
         </ThemedText>
       </Collapsible>
       <View style={styles.flexComplete}>
-      <TouchableOpacity onPress={handleNavigate} style={getButtonStyle(4)}>
+      <TouchableOpacity onPress={handleBank} style={getButtonStyle(4)}>
           <Text style={styles.buttonText}>contacteer mijn bank</Text>
         </TouchableOpacity>
         <CheckBox

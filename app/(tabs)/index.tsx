@@ -15,7 +15,7 @@ export default function HomeScreen() {
   };
   
   const handleFuneral = () => {
-    navigation.navigate('FuneralMap'); // Navigate to 'Screen' when button is pressed
+    navigation.navigate('Begrafenisondernemers'); // Navigate to 'Screen' when button is pressed
   };
 
   return (
